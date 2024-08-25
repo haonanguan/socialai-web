@@ -10,7 +10,7 @@ import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
 import { useNavigate } from "react-router-dom";
-import PublicIcon from "@mui/icons-material/Public";
+import Diversity2Icon from "@mui/icons-material/Diversity2";
 import LogoutIcon from "@mui/icons-material/Logout";
 
 const pages = ["Create", "Collection"];
@@ -39,15 +39,15 @@ function ResponsiveAppBar(props) {
         <AppBar
             position="static"
             style={{
-                background: "black",
+                background: "navy",
                 top: 0,
                 position: "fixed",
                 zIndex: 1,
             }}
         >
-            <Container maxWidth="xl">
+            <Container maxWidth="xxl">
                 <Toolbar disableGutters>
-                    <PublicIcon
+                    <Diversity2Icon
                         sx={{
                             display: {
                                 xs: isLoggedIn ? "none" : "flex",
