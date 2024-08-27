@@ -74,7 +74,7 @@ function ResponsiveAppBar(props) {
                             textDecoration: "none",
                         }}
                     >
-                        Social AI
+                        Artify Network
                     </Typography>
 
                     {isLoggedIn && (
