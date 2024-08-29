@@ -15,10 +15,12 @@
     "axios": "^1.6.7",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "react-photo-album": "^2.3.1",
     "react-router-dom": "^6.26.1",
     "react-scripts": "5.0.1",
     "styled-components": "^6.1.12",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "yet-another-react-lightbox": "^3.19.0"
   },
   "scripts": {
     "start": "react-scripts start",
