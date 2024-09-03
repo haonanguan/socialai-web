@@ -34,7 +34,7 @@ const wrapperStyle = {
 };
 
 function PhotoGallery(props) {
-    const [images, setImages] = useState(props.image);
+    const [images, setImages] = useState(props.images);
     const [index, setIndex] = useState(-1);
 
     const imageArr = images.map((image) => {
@@ -75,13 +75,14 @@ function PhotoGallery(props) {
             axios(opt)
                 .then((res) => {
                     console.log("delete result -> ", res);
-                    //case1: success
+                    // case1: success
                     if (res.status === 200) {
+                        // step1: set state
                         setImages(newImageArr);
                     }
                 })
                 .catch((err) => {
-                    //case2: fail
+                    // case2: fail
                     message.error("Fetch posts failed!");
                     console.log("fetch posts failed: ", err.message);
                 });
@@ -102,7 +103,7 @@ function PhotoGallery(props) {
                 photos={imageArr}
                 layout="rows"
                 targetRowHeight={200}
-                onClick={updateIndex}
+                onClick={({ index }) => setIndex(index)}
             />
             <Lightbox
                 slides={imageArr}
