@@ -5,6 +5,7 @@ import axios from "axios";
 import SearchBar from "./SearchBar";
 import { SEARCH_KEY, BASE_URL, TOKEN_KEY } from "../constants";
 import PhotoGallery from "./PhotoGallery";
+import CreatePostButton from "./CreatePostButton";
 
 const { TabPane } = Tabs;
 
@@ -100,6 +101,16 @@ function Collection(props) {
         }
     };
 
+    const showPost = (type) => {
+        console.log("type", type);
+        setActiveTab(type);
+        setTimeout(() => {
+            setSearchOption({ type: SEARCH_KEY.all, keyword: "" });
+        }, 3000);
+    };
+
+    const operations = <CreatePostButton onShowPost={showPost} />;
+
     return (
         <div className="home">
             <SearchBar handleSearch={handleSearch} />
@@ -108,6 +119,7 @@ function Collection(props) {
                     onChange={(key) => setActiveTab(key)}
                     defaultActiveKey="image"
                     activeKey={activeTab}
+                    tabBarExtraContent={operations}
                 >
                     <TabPane tab="Images" key="image">
                         {renderPosts("image")}

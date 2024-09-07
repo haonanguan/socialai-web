@@ -8,16 +8,16 @@ export const PostForm = forwardRef((props, formRef) => {
         wrapperCol: { span: 14 },
     };
 
-    const normFile = (e) => (Array.isArray(e) ? e : e?.filelist);
+    const normFile = (e) => (Array.isArray(e) ? e : e?.fileList);
 
     return (
         <Form name="validate_other" {...formItemLayout} ref={formRef}>
             <Form.Item
                 name="description"
-                lable="Message"
+                label="Message"
                 rules={[
                     {
-                        reuired: true,
+                        required: true,
                         message: "Please input your message!",
                     },
                 ]}
