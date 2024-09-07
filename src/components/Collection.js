@@ -20,10 +20,10 @@ function Collection(props) {
     const handleSearch = (option) => setSearchOption(option);
 
     useEffect(() => {
-        fetchPosts(searchOption);
+        fetchPost(searchOption);
     }, [searchOption]);
 
-    const fetchPosts = (option) => {
+    const fetchPost = (option) => {
         const { type, keyword } = option;
         let url = "";
 
